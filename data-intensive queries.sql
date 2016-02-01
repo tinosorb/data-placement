@@ -1,6 +1,6 @@
 #Query 98
 
-select i_item_desc 
+explain analyze select i_item_desc 
       ,i_category 
       ,i_class 
       ,i_current_price
@@ -31,8 +31,10 @@ order by
         ,revenueratio;
 
 
+
 #Query 40
-select  
+
+explain analyze select  
    w_state
   ,i_item_id
   ,sum(case when (cast(d_date as date) < cast ('1998-04-08' as date)) 
@@ -58,8 +60,11 @@ select
  order by w_state,i_item_id
 limit 100;
 
+
+
 #Query 42
-select  dt.d_year
+
+explain analyze select  dt.d_year
  	,item.i_category_id
  	,item.i_category
  	,sum(ss_ext_sales_price)
@@ -80,8 +85,10 @@ select  dt.d_year
 limit 100 ;
 
 
+
 #Query 22
-select  i_product_name
+
+explain analyze select  i_product_name
              ,i_brand
              ,i_class
              ,i_category
@@ -102,8 +109,10 @@ order by qoh, i_product_name, i_brand, i_class, i_category
 limit 100;
 
 
+
 #Query 3
-select  dt.d_year 
+
+explain analyze select  dt.d_year 
        ,item.i_brand_id brand_id 
        ,item.i_brand brand
        ,sum(ss_ext_sales_price) sum_agg
