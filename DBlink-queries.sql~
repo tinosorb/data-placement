@@ -1,4 +1,4 @@
--- Migrating Inventory table
+# Migrating Inventory table
 
 insert into inventory select * from
 dblink('host=host user=user password=password dbname=password',
