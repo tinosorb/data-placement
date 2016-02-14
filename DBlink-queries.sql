@@ -191,7 +191,7 @@ dblink('host=gho-admin user=postgres password=postgres dbname=postgres',
 -- Migrating Inventory table.
 
 insert into inventory select * from
-dblink('host=host user=user password=password dbname=password',
+dblink('host=gho-admin user=postgres password=postgres dbname=postgres',
 'select * from inventory') as t1(
  inv_date_sk           integer, 
  inv_item_sk           integer, 
