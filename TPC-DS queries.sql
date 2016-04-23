@@ -1,6 +1,6 @@
 #Query13
 
-select avg(ss_quantity)
+explain analyze select avg(ss_quantity)
        ,avg(ss_ext_sales_price)
        ,avg(ss_ext_wholesale_cost)
        ,sum(ss_ext_wholesale_cost)
@@ -53,7 +53,7 @@ select avg(ss_quantity)
 
 #Q16
 
-select  
+explain analyze select  
    count(distinct cs_order_number) as "order count"
   ,sum(cs_ext_ship_cost) as "total shipping cost"
   ,sum(cs_net_profit) as "total net profit"
