@@ -69,3 +69,12 @@ create table item (
  i_product_name    char(50)
 );       
 
+
+create table inventory(
+ inv_date_sk           integer, 
+ inv_item_sk           integer, 
+ inv_warehouse_sk      integer, 
+ inv_quantity_on_hand  integer 
+);
+
+
